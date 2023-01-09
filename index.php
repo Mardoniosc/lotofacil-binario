@@ -26,7 +26,7 @@ if ($jogo) {
   $premio15 = $response["premiacoes"][0];
   $premio14 = $response["premiacoes"][1];
 
-  print_r($response);
+  // print_r($response);
 
   curl_close($ch);
   $hoje = date("d/m/Y H:i:s");
