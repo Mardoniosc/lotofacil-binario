@@ -21,11 +21,12 @@ if ($jogo) {
 
   $acertos = $response["Quantidade de Acertos"];
   $concurso = $response["concurso"];
+  $data_concurso = $response["Data Sorteio"];
   $numeroAcertados = $response["Números acertos"];
   $premio15 = $response["premiacoes"][0];
   $premio14 = $response["premiacoes"][1];
 
-  // print_r($response);
+  print_r($response);
 
   curl_close($ch);
   $hoje = date("d/m/Y H:i:s");
@@ -99,9 +100,13 @@ if ($jogo) {
       </div>
       <div class="border-t border-gray-200">
         <dl>
-          <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            <dt class="text-sm font-medium text-gray-500">Jogo</dt>
+          <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          <dt class="text-sm font-medium text-gray-500">Jogo</dt>
             <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><?= $jogo; ?></dd>
+          </div>
+          <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt class="text-sm font-medium text-gray-500">Data Sorteio</dt>
+            <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><?= $data_concurso; ?></dd>
           </div>
           <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt class="text-sm font-medium text-gray-500">Concurso</dt>
@@ -145,8 +150,8 @@ if ($jogo) {
     <div class="p-6 mt-5">
 
       <div class="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3" role="alert">
-      <p class="font-bold">Autor Mardonio</p>
-      <p>Caso tenha alguma dúvida entrar em contato.</p>
+        <p class="font-bold">Autor Mardonio</p>
+        <p>Caso tenha alguma dúvida entrar em contato.</p>
       </div>
 
     </div>
